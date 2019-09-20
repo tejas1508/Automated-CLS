@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>
+            User Dashboard
+        </title>
+        <style>
+            body{
+				margin:0;
+				padding:0;
+				font-family:sans-serif;
+				background: url(bg2.jpg) ;
+				background-size:cover;
+			}
+
+            .dashboard{
+                width:280px;
+				position:absolute;
+				top:25%;
+				left:50%;
+				transform: translate(-50%,-50%);
+				color:#00ffff;
+            }
+            .btn{
+				width:80%;
+				background:none;
+				border:2px solid #99cc00;
+				color:#00ffff;
+				padding:5px;
+				font-size:18px;
+				cursor:pointer;
+				margin:10px 0;
+			}
+			.btn:hover {
+				background-color: #336699;
+				color: none;
+			}
+
+        </style>
+    </head>
+    <body>
+        <h1><center style="color:#00ffff">Welcome to User Dashboard</center></h1>
+        <div class="dashboard">
+			<form action="logout.php" method="POST">
+				<a href="PowerUsage.html"><input class="btn" type="button" name="powerusage-btn" value="View Power Usage"></a>
+				<a href="PowerController.html"><input class="btn" type="button" name="powercontrol-btn" value="Control The System"></a>
+				<input class="btn" type="submit" name="logout-btn" value="Logout"></a>
+			</form>
+        </div>
+    </body>
+</html>
