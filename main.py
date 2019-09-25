@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
+from time import perf_counter
 GPIO.setmode(GPIO.BOARD)
 
 #define the pin that goes to the circuit
@@ -37,11 +38,20 @@ def rc_time (ldrPin):
     GPIO.setup(ldrPin, GPIO.IN)
   
     #Count until the pin goes high
-    while (GPIO.input(ldrPin, GPIO.LOW):
+    while (GPIO.input(ldrPin, GPIO.LOW)):
         count += 1
 
     return count
 
+def measureONTime(ledPin1, ledPin2):
+    t1 = perf_counter()
+
+    while True:
+        if(GPIO.input(ledPin1, GPIO.LOW)):
+            t2 = perf_counter()
+
+    
+    
 #Catch when script is interrupted, cleanup correctly
 try:
     # Main loop
