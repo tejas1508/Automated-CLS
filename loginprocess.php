@@ -2,11 +2,15 @@
     if (isset($_POST['login-btn'])){
     $Username = $_POST['Username'];
     $password = $_POST['password'];
+    
     if (empty($Username)){
         echo "Username required";
     }
     if (empty($password)){
         echo "Password required";
+    }
+    if (empty($Username) and empty($password)){
+        echo "Username and password required";
     }
     $host = "localhost";
     $dbusername = "root";

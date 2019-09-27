@@ -1,10 +1,11 @@
-@import "<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
 			Automated Corridor Lighting System
 		</title>
+			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
 		 	<meta name="viewport" content="width=device-width, initial-scale=1">
  			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,6 +25,8 @@
 				left:50%;
 				transform: translate(-50%,-50%);
 				color:#00ffff;
+				
+				
 			}
 			.login-box h1{
 				float:left;
@@ -86,22 +89,24 @@
 	</head>
 	<body>
 		<h1><center style="color:#00ffff">Welcome to Automated Corridor Lighting System</center></h1>
-		<div class="login-box">
-			<h1>Login</h1>
-			<form action="loginprocess.php" method="POST">
-				<div class="textbox">
-					<i class="fa fa-user" aria-hidden="true"></i>
-					<input type="text" id="Username" class="form-control form-control-lg" placeholder="Username" name="Username" value="">
-				</div>
-				<div class="textbox">
-					<i class="fa fa-key" aria-hidden="true"></i>
-					<input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" value="">
-				</div>
-				<i class="fa fa-sign-in" aria-hidden="true"></i>
-				<input class="btn btn-primary btn-block btn-lg" type="submit" name="login-btn" value="Login">
-				<i class="fa fa-sign-in" aria-hidden="true"></i>
-				<a href="registerform.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="" value="Register"></a>
-			</form>
+		<div class="container">
+			<div class="login-box">
+				<h1>Login</h1>
+				<form action="loginprocess.php" method="POST">
+					<div class="textbox">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" id="Username" class="form-control form-control-lg" placeholder="Username" name="Username" value="" required>
+					</div>
+					<div class="textbox">
+						<i class="fa fa-key" aria-hidden="true"></i>
+						<input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" value="" required>
+					</div>
+					<i class="fa fa-sign-in" aria-hidden="true"></i>
+					<input class="btn btn-primary btn-block btn-lg" type="submit" name="login-btn" value="Login">
+					<i class="fa fa-sign-in" aria-hidden="true"></i>
+					<a href="registerform.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="" value="Register"></a>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
