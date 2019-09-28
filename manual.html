@@ -1,0 +1,177 @@
+<html>
+    <head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
+
+        <meta charset="utf-8">
+        <style>
+            body{
+				margin:0;
+				padding:0;
+				font-family:sans-serif;
+				background: url(bg2.jpg) ;
+				background-size:cover;
+			}
+            .register-box{
+                width:230px;
+				position:absolute;
+				top:70%;
+				left:30%;
+				transform: translate(-60%,-50%);
+				color:#00ffff;
+            }
+            .content-box table{
+                font-size:15px;
+				margin-top:5px;
+				padding: 30px 0;
+                color:#00ffff;
+                width:500px;
+            }
+            .content-box input{
+				border:none;
+				outline:none;
+				background:none;
+				color:#00cc99;
+				font-size:18px;
+				width:200px;
+				float:left;
+				margin:5px;
+                overflow:hidden;
+			}
+            .content-box option{
+				border:none;
+				outline:none;
+				background:none;
+				font-size:18px;
+				width:200px;
+				float:left;
+				margin:5px;
+                
+			}
+            .register-box i{
+				width:10px;
+				color:#00ffff;
+				float:left;
+				text-align:center;
+            }
+            .radiob input{
+                border:none;
+				outline:none;
+				background:none;
+				color:#00cc99;
+				font-size:18px;
+				width:50px;
+				margin:1px;
+            }
+			.btn:hover {
+				background-color: #336699;
+				color: none;
+			}
+            
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <div class="register-box">
+                <div class="content-box">
+                    <table>
+                         <tr>
+                            <td>
+                                <h2>Manual Switch On/Off Control</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Switch On/Off Floor All Floor Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="mainswitch">ON<br>
+                                    <input type="radio" name="mainswitch">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Switch On/Off Floor 1 Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="switch1">ON<br>
+                                    <input type="radio" name="switch1">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <h5>Switch On/Off Floor 2 Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="switch2">ON<br>
+                                    <input type="radio" name="switch2">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <h5>Switch On/Off Floor 3 Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="switch3">ON<br>
+                                    <input type="radio" name="switch3">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <h5>Switch On/Off Floor 4 Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="switch4">ON<br>
+                                    <input type="radio" name="switch4">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <h5>Switch On/Off Floor 5 Lights:</h5>
+                            </td>
+                            <td>
+                                <div class="radiob" style="color:#669999;">
+                                    <input type="radio" name="switch5">ON<br>
+                                    <input type="radio" name="switch5">OFF
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <h5>Search Tubelight By Id:</h5>
+                            </td>
+                            <td>
+                               <form action="#">
+                                    <tr>
+                                        <td>
+                                            <input type="search" placeholder="Light_id" name="L_id" value="" >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Search">
+                                        </td>
+                                    </tr>
+                               </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Submit">
+                <i class="fa fa-undo"></i>
+                <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
+                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
+            </div>
+        </form>
+    </body>
+</html>

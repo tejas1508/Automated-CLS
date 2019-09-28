@@ -21,8 +21,8 @@ if (!empty($name) || !empty($Username) ||!empty($password) || !empty($post) ||!e
         die('Connect Error('. mysql_connect_error().')'. mysqli_connect_error());
     }else {
 
-        $password=password_hash($password,PASSWORD_DEFAULT);
-        $token = bin2hex(random_bytes(50));
+        // $password=password_hash($password,PASSWORD_DEFAULT);
+        // $token = bin2hex(random_bytes(50));
         
         $SELECT = "SELECT email From registrationform Where email = ? Limit 1";
         $INSERT = "INSERT Into registrationform (name,Username,password,post,joindate,mobno,email,address,gender) values(?,?,?,?,?,?,?,?,?)";

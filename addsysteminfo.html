@@ -1,0 +1,155 @@
+<html>
+    <head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
+
+        <meta charset="utf-8">
+        <style>
+            body{
+				margin:0;
+				padding:0;
+				font-family:sans-serif;
+				background: url(bg2.jpg) ;
+				background-size:cover;
+			}
+            .register-box{
+                width:230px;
+				position:absolute;
+				top:30%;
+				left:47%;
+				transform: translate(-50%,-50%);
+				color:#00ffff;
+            }
+            .content-box table{
+                font-size:15px;
+				margin-top:60px;
+				padding: 30px 0;
+                color:#00ffff;
+                width:500px;
+            }
+            .content-box input{
+				border:none;
+				outline:none;
+				background:none;
+				color:#00cc99;
+				font-size:18px;
+				width:200px;
+				float:left;
+				margin:5px;
+                overflow:hidden;
+			}
+            .content-box option{
+				border:none;
+				outline:none;
+				background:none;
+				
+				font-size:18px;
+				width:200px;
+				float:left;
+				margin:5px;
+                
+			}
+            .register-box i{
+				width:10px;
+				color:#00ffff;
+				float:left;
+				text-align:center;
+				
+			.btn:hover {
+				background-color: #336699;
+				color: none;
+			}
+            
+           
+        </style>
+    </head>
+    <body>
+        <form action="insertacls.php" method="POST">
+            <div class="register-box">
+                <div class="content-box">
+                    <table>
+                         <tr>
+                            <td>
+                                <h2>Add System Information</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Unique Light Id:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Light Id" name="Lid" value="" title="Eg,Unique Light ID:123 means 1st floor->2nd subsection->3rd Tube light" required>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Light Type:
+                            </td>
+                            <td>
+                                <select>
+                                <option value="fluore1">Fluorescent Tube Light T12</option>
+                                <option value="fluore">Fluorescent Tube LightT8</option>
+                                <option value="led1">LED Tube Light T4</option>
+                                <option value="led2">LED Tube Light T5</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Brand name:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="brand name" name="brand" value=""  required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Watts:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Watts in kW" name="watts" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lumens:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Lumens" name="lumens" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Expiry Date:
+                            </td>
+                            <td>
+                                <input type="Date" placeholder="DD-MM-YYYY" name="joindate" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Average rated Life:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="hrs" name="lifespan"  value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Warranty
+                            </td>
+                            <td>
+                                <input type="text" placeholder="No. of years" name="warranty" value="" required>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Submit">
+                <i class="fa fa-undo"></i>
+                <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
+                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
+            </div>
+        </form>
+    </body>
+</html>
