@@ -34,20 +34,21 @@
 				top:50%;
 				left:50%;
             }
+            .btn:hover {
+				background-color: #336699;
+				color: none;
+			}
         </style>
         <script>
             $(document).ready(function(){
                 $("#button1").click(function(){
-                    $("#here").load("index.html");
+                    $("#here").load("monthlyusage.html");
                 });
                 $("#button2").click(function(){
-                    $("#here").load("automatic.html");
+                    $("#here").load("yearlyusage.html");
                 });
                 $("#button3").click(function(){
-                    $("#here").load("addsysteminfo.html");
-                });
-                $("#button4").click(function(){
-                    $("#here").load("Deletesysteminfo.html");
+                    $("#here").load("dailyusage.html");
                 });
             });
         </script>
@@ -82,7 +83,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div id="h5">
+                            <div id="h4">
                                 <li> <a href="UserDashboard.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="" value="Go Back"></a></li>
                             </div>
                         </td>
@@ -93,7 +94,7 @@
         <div class="PowerUsage2">
             <form>
                 <div id="here">
-                        
+                       
                 </div>
             </form>
         </div>

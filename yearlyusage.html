@@ -40,7 +40,6 @@
 				border:none;
 				outline:none;
 				background:none;
-				
 				font-size:18px;
 				width:200px;
 				float:left;
@@ -67,34 +66,24 @@
                     <table>
                         <tr>
                             <td>
-                                <h2>Delete System Information</h2>
+                                <h2>Enter Year:</h2>
                             </td>
+                            <td>
+                                <input type="month" name='year' id="year" required>
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Show Graph">Show Graph</button>
+                            </td>                        
                         </tr>
                         <tr>
                             <td>
-                                Search By Light_id:
-                            </td>
-                            <td>
-                               <form action="#">
-                                    <tr>
-                                        <td>
-                                            <input type="search" placeholder="Light_id" name="L_id" value="" required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Search">
-                                        </td>
-                                    </tr>
-                               </form>
-                            </td>
+                                <button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerUsage.html';">Go Back</button>
+                            </td>                        
                         </tr>
                     </table>
                 </div>
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Delete">
-                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
-
             </div>
         </form>
     </body>
