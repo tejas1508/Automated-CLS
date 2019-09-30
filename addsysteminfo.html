@@ -63,7 +63,7 @@
         </style>
     </head>
     <body>
-        <form action="insertacls.php" method="POST">
+        <form action="addsysteminformation.php" method="POST">
             <div class="register-box">
                 <div class="content-box">
                     <table>
@@ -83,14 +83,15 @@
                         </tr>
                         <tr>
                             <td>
-                                Light Type:
+                                Tubelight Type:
                             </td>
                             <td>
-                                <select>
-                                <option value="fluore1">Fluorescent Tube Light T12</option>
-                                <option value="fluore">Fluorescent Tube LightT8</option>
-                                <option value="led1">LED Tube Light T4</option>
-                                <option value="led2">LED Tube Light T5</option>
+                                <select name="Tubetype">
+                                <option selected disabled>--select tubelight type--</option>
+                                <option value="Fluorescent Tube Light T12">Fluorescent Tube Light T12</option>
+                                <option value="Fluorescent Tube LightT8">Fluorescent Tube LightT8</option>
+                                <option value="LED Tube Light T4">LED Tube Light T4</option>
+                                <option value="LED Tube Light T5">LED Tube Light T5</option>
                                 </select>
                             </td>
                         </tr>
@@ -104,7 +105,7 @@
                         </tr>
                         <tr>
                             <td>
-                                Watts:
+                                Watts1:
                             </td>
                             <td>
                                 <input type="text" placeholder="Watts in kW" name="watts" value="" required>
@@ -123,7 +124,7 @@
                                 Expiry Date:
                             </td>
                             <td>
-                                <input type="Date" placeholder="DD-MM-YYYY" name="joindate" value="" required>
+                                <input type="Date" placeholder="DD-MM-YYYY" name="Expirydate" value="" required>
                             </td>
                         </tr>
                         <tr>
@@ -136,7 +137,7 @@
                         </tr>
                         <tr>
                             <td>
-                                Warranty
+                                Warranty:
                             </td>
                             <td>
                                 <input type="text" placeholder="No. of years" name="warranty" value="" required>

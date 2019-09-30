@@ -1,6 +1,7 @@
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="utf-8">
         <title>
             Power Usage
@@ -13,12 +14,88 @@
 				background: url(bg2.jpg) ;
 				background-size:cover;
 			}
+              .btn{
+				width:100%;
+				background:none;
+				border:2px solid #99cc00;
+				color:#00ffff;
+				padding:5px;
+				font-size:18px;
+				cursor:pointer;
+				margin:10px 0;
+			}
+            .powerUsage1{
+                position:absolute;
+				top:7%;
+				left:0.2%;
+            }
+            .powerUsage2{
+                position:absolute;
+				top:50%;
+				left:50%;
+            }
         </style>
+        <script>
+            $(document).ready(function(){
+                $("#button1").click(function(){
+                    $("#here").load("index.html");
+                });
+                $("#button2").click(function(){
+                    $("#here").load("automatic.html");
+                });
+                $("#button3").click(function(){
+                    $("#here").load("addsysteminfo.html");
+                });
+                $("#button4").click(function(){
+                    $("#here").load("Deletesysteminfo.html");
+                });
+            });
+        </script>
     </head>
     <body>
-        <h1><center style="color:#00ffff">Power Usage Statistics</center></h1>
-        <div class="Usage">
-            
+        <div>
+            <h1><center style="color:#00ffff">Power Usage Statistics</center></h1>
+        </div>
+        <div class="PowerUsage1">
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div id="h1">
+                                <li> <button class="btn btn-primary btn-block btn-lg" type="button" name="button1" id="button1" >Monthly Power Usage</button></li>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="h2">
+                                <li> <button class="btn btn-primary btn-block btn-lg" type="button" name="button2" id="button2" >Yearly Power Usage</button></li>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="h3">
+                                <li> <button class="btn btn-primary btn-block btn-lg" type="button" name="button2" id="button3" >Daily Power Usage</button></li>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="h5">
+                                <li> <a href="UserDashboard.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="" value="Go Back"></a></li>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="PowerUsage2">
+            <form>
+                <div id="here">
+                        
+                </div>
+            </form>
         </div>
     </body>
 </html

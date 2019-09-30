@@ -63,13 +63,21 @@
         </style>
     </head>
     <body>
-        <form action="#" method="POST">
+        <form action="automatic.php" method="POST">
             <div class="register-box">
                 <div class="content-box">
                     <table>
                          <tr>
                             <td>
                                 <h2>Automatic Switch On/Off mode</h2>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                Enter New Control ID:
+                            </td>
+                            <td>
+                                <input type="text" placeholder="" name="C_id" value="" required>
                             </td>
                         </tr>
                         <tr>
@@ -95,7 +103,6 @@
                 <i class="fa fa-undo"></i>
                 <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
                 &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
-
             </div>
         </form>
     </body>
