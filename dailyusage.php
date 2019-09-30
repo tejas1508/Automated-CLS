@@ -1,0 +1,1 @@
+SELECT consumptioninfo.P_Date ,((consumptioninfo.P_hours * tubelightinfo.watts)) AS powerconsumed FROM consumptioninfo JOIN tubelightinfo on consumptioninfo.Lid1 = tubelightinfo.Lid GROUP BY consumptioninfo.P_id

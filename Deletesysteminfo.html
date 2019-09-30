@@ -61,7 +61,7 @@
         </style>
     </head>
     <body>
-        <form action="#" method="POST">
+        <form action="deletesysteminfo.php" method="POST">
             <div class="register-box">
                 <div class="content-box">
                     <table>
@@ -72,29 +72,24 @@
                         </tr>
                         <tr>
                             <td>
-                                Search By Light_id:
+                                Enter Light_id to be Deleted:
                             </td>
                             <td>
-                               <form action="#">
-                                    <tr>
-                                        <td>
-                                            <input type="search" placeholder="Light_id" name="L_id" value="" required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Search">
-                                        </td>
-                                    </tr>
-                               </form>
+                                <input type="text" name="Lid" id="Lid" required>
+                            </td>
+                        <tr>
+                        </tr>
+                            <td>
+                                <input type="submit" name="delete" id="delete" value="Delete">    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Delete">
-                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
-
             </div>
         </form>
     </body>
