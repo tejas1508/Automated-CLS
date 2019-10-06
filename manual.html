@@ -18,6 +18,14 @@
 				transform: translate(-60%,-50%);
 				color:#00ffff;
             }
+            .register-box1{
+                width:230px;
+				position:absolute;
+				top:150%;
+				left:30%;
+				transform: translate(-60%,-50%);
+				color:#00ffff;
+            }
             .content-box table{
                 font-size:15px;
 				margin-top:5px;
@@ -44,7 +52,7 @@
 				width:200px;
 				float:left;
 				margin:5px;
-                
+
 			}
             .register-box i{
 				width:10px;
@@ -65,7 +73,7 @@
 				background-color: #336699;
 				color: none;
 			}
-            
+
         </style>
     </head>
     <body>
@@ -149,7 +157,7 @@
                                  <h3>Search Tubelight By Id:</h3>
                             </td>
                             <td>
-                               <form action="searchtubelightbyid.php" method="POST">
+                               <!-- <form action="searchtubelightbyid.php" method="POST">
                                     <tr>
                                         <td>
                                             <input type="search" placeholder="Light_id" name="Lid" value="" >
@@ -160,7 +168,7 @@
                                             <input class="btn btn-primary btn-block btn-lg" type="submit" name="search" value="Search">
                                         </td>
                                     </tr>
-                               </form>
+                               </form> -->
                             </td>
                         </tr>
                         <tr>
@@ -178,9 +186,23 @@
                                 <button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
                             </td>
                         </tr>
+                        <form action="searchtubelightbyid.php" method="POST">
+                             <tr>
+                                 <td>
+                                     <input type="search" placeholder="Enter light-id" name="lid">
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                   <button type="submit" name="button1">ON</button>
+                                   <button type="submit" name="button2">OFF</button>
+                                 </td>
+                             </tr>
+                        </form>
                     </table>
                 </div>
             </div>
         </form>
+        </div>
     </body>
 </html>

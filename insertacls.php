@@ -13,7 +13,7 @@ if (!empty($name) || !empty($Username) ||!empty($password) || !empty($post) ||!e
     $host = "localhost";
     $dbusername = "root";
     $dbpassword = "";
-    $dbname = "acls";
+    $dbname = "iottest";
 
     $conn= new mysqli($host,$dbusername,$dbpassword,$dbname);
 
@@ -23,11 +23,11 @@ if (!empty($name) || !empty($Username) ||!empty($password) || !empty($post) ||!e
 
         // $password=password_hash($password,PASSWORD_DEFAULT);
         // $token = bin2hex(random_bytes(50));
-        
-        $SELECT = "SELECT email From registrationform Where email = ? Limit 1";
-        $INSERT = "INSERT Into registrationform (name,Username,password,post,joindate,mobno,email,address,gender) values(?,?,?,?,?,?,?,?,?)";
+
+        $SELECT = "SELECT Username From registrationinfo Where Username = ? Limit 1";
+        $INSERT = "INSERT Into registrationinfo (name,Username,password,post,joindate,mobno,email,address,gender) values(?,?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($SELECT);
-        $stmt->bind_param('s',$email);
+        $stmt->bind_param("s",$email);
         $stmt->execute();
         $stmt->bind_result($email);
         $stmt->store_result();
