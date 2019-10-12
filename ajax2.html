@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-
-  <title>My Chart.js Chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 <body>
 
-    <canvas id="myChart"></canvas>
+<div id="demo">
 
-  <script>
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc('info.txt', myFunction)">Change Content
+</button>
+</div>
+<div id="container">
+    <button type="button" onclick="loadDoc('info.txt', myFunction1)">Change Content
+</button>
+    <canvas id="myChart"></canvas>
+</div>
+&emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='ajax1.html';">Go Back</button>
+
+<script>
+function loadDoc(url, cFunction) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cFunction(this);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function myFunction(xhttp) {
+  document.getElementById("demo").innerHTML =
+  xhttp.responseText;
+}
+function myFunction1(xhttp) {
+  document.getElementById("container").innerHTML =
+  xhttp.responseText;
+}
+</script>
+<script>
     let myChart = document.getElementById('myChart').getContext('2d');
 
     // Global Options
@@ -23,14 +51,16 @@
     let massPopChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['10-10-2019', '11-10-2019', '12-10-2019', '13-10-2019'],
+        labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
         datasets:[{
-          label:'Time (in sec)',
+          label:'Population',
           data:[
-            42200,
-            46800,
-            50000,
-            46555
+            617594,
+            181045,
+            153060,
+            106519,
+            105162,
+            95072
           ],
           //backgroundColor:'green',
           backgroundColor:[
@@ -51,7 +81,7 @@
       options:{
         title:{
           display:true,
-          text:'Light ON Time',
+          text:'Largest Cities In Massachusetts',
           fontSize:25
         },
         legend:{
@@ -75,6 +105,5 @@
       }
     });
   </script>
-  &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='UserDashboard.html';">Go Back</button>
 </body>
 </html>

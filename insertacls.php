@@ -42,6 +42,7 @@ if (!empty($name) || !empty($Username) ||!empty($password) || !empty($post) ||!e
             $stmt->bind_param("sssssisss",$name,$Username,$password,$post,$joindate,$mobno,$email,$address,$gender);
             $stmt->execute();
             echo "New Record Inserted Successfully";
+            header('location:loginform.html');
 
         } else {
             echo " Someone Already register using this email";

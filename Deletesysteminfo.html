@@ -1,13 +1,14 @@
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <meta charset="utf-8">
         <style>
             body{
 				margin:0;
 				padding:0;
 				font-family:sans-serif;
-				background: url(bg2.jpg) ;
+				background-color:#17202A;
 				background-size:cover;
 			}
             .register-box{
@@ -26,9 +27,7 @@
                 width:600px;
             }
             .content-box input{
-				border:none;
-				outline:none;
-				background:none;
+				border:#00cc99;
 				color:#00cc99;
 				font-size:18px;
 				width:200px;
@@ -39,25 +38,24 @@
             .content-box option{
 				border:none;
 				outline:none;
-				background:none;
-				
 				font-size:18px;
 				width:200px;
 				float:left;
 				margin:5px;
-                
+
 			}
             .register-box i{
 				width:10px;
 				color:#00ffff;
 				float:left;
 				text-align:center;
-				
+            }
+
 			.btn:hover {
 				background-color: #336699;
-				color: none;
+				
 			}
-           
+
         </style>
     </head>
     <body>
@@ -72,20 +70,22 @@
                         </tr>
                         <tr>
                             <td>
-                                Enter Light_id to be Deleted:
+                                <span class="input-group-text">Enter Light_id to be Deleted:</span>
                             </td>
                             <td>
-                                <input type="text" name="Lid" id="Lid" required>
+                                <input class="form-control"type="text" name="Lid" id="Lid" required>
                             </td>
                         <tr>
                         </tr>
                             <td>
-                                <input type="submit" name="delete" id="delete" value="Delete">    
+                                <button class="btn btn-outline-success" type="submit" name="delete" value="Delete">Delete</button>
+                                <!-- <input class="btn btn-outline-success" type="submit" name="delete" id="delete" value="Delete"> -->
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>
-                                <button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
+                                <button class="btn btn-outline-success" onclick="window.location.href='PowerController.html';">Go Back</button>
                             </td>
                         </tr>
                     </table>

@@ -8,7 +8,7 @@
 				margin:0;
 				padding:0;
 				font-family:sans-serif;
-				background: url(bg2.jpg) ;
+				background-color:#17202A;
 				background-size:cover;
 			}
             .register-box{
@@ -27,9 +27,7 @@
                 width:500px;
             }
             .content-box input{
-				border:none;
-				outline:none;
-				background:none;
+				
 				color:#00cc99;
 				font-size:18px;
 				width:200px;
@@ -38,9 +36,7 @@
                 overflow:hidden;
 			}
             .content-box option{
-				border:none;
-				outline:none;
-				background:none;
+				
 
 				font-size:18px;
 				width:200px;
@@ -53,10 +49,11 @@
 				color:#00ffff;
 				float:left;
 				text-align:center;
+            }
 
 			.btn:hover {
 				background-color: #336699;
-				color: none;
+				
 			}
 
 
@@ -74,35 +71,34 @@
                         </tr>
                          <tr>
                             <td>
-                                Enter New Control ID:
+                                    <span class="input-group-text">Enter New Control ID:</span>
                             </td>
                             <td>
-                                <input type="text" placeholder="" name="C_id" value="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Start Time:
-                            </td>
-                            <td>
-                                <input type="time" placeholder="" name="starttime" value="">
+                                <input class="form-control" type="text" placeholder="" name="C_id" value="">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Stop Time:
+                                    <span class="input-group-text">Start Time:</span>
                             </td>
                             <td>
-                                <input type="time" placeholder="" name="stoptime" value="">
+                                <input class="form-control" type="time" placeholder="" name="starttime" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                    <span class="input-group-text">Stop Time:</span>
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" placeholder="" name="stoptime" value="">
                             </td>
                         </tr>
                     </table>
                 </div>
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Submit">
-                <i class="fa fa-undo"></i>
-                <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
-                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
+                <input class="btn btn-outline-success mb-3" type="submit" name="Submit" value="Submit"><br>
+                
+                <input class="btn btn-outline-success" type="Reset" name="Reset" value="Reset">
+                &emsp;&emsp;&emsp;<button class="btn btn-outline-success" onclick="window.location.href='PowerController.html';">Go Back</button>
             </div>
         </form>
     </body>

@@ -1,6 +1,7 @@
 <html>
     <head>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
         <meta charset="utf-8">
         <style>
@@ -8,7 +9,7 @@
 				margin:0;
 				padding:0;
 				font-family:sans-serif;
-				background: url(bg2.jpg) ;
+				background-color:#17202A;
 				background-size:cover;
 			}
             .register-box{
@@ -21,15 +22,15 @@
             }
             .content-box table{
                 font-size:15px;
-				margin-top:60px;
-				padding: 30px 0;
+        				margin-top:60px;
+        				padding: 30px 0;
                 color:#00ffff;
                 width:500px;
             }
             .content-box input{
 				border:none;
-				outline:none;
-				background:none;
+				outline:black;
+				background-color: white;
 				color:#00cc99;
 				font-size:18px;
 				width:200px;
@@ -38,28 +39,26 @@
                 overflow:hidden;
 			}
             .content-box option{
-				border:none;
-				outline:none;
-				background:none;
-				
+				outline:black;
 				font-size:18px;
 				width:200px;
 				float:left;
 				margin:5px;
-                
 			}
             .register-box i{
 				width:10px;
 				color:#00ffff;
 				float:left;
 				text-align:center;
-				
+            }
+            .input-group-text{
+                color:black;
+            }
 			.btn:hover {
 				background-color: #336699;
-				color: none;
 			}
-            
-           
+
+
         </style>
     </head>
     <body>
@@ -74,19 +73,20 @@
                         </tr>
                         <tr>
                             <td>
-                                Unique Light Id:
+                              <span class="input-group-text">Unique Light Id*:</span>
                             </td>
                             <td>
-                                <input type="text" placeholder="Light Id" name="Lid" value="" title="Eg,Unique Light ID:123 means 1st floor->2nd subsection->3rd Tube light" required>
-                            
+                                <input class="form-control" type="text" placeholder="Light Id" name="Lid" value="" title="Eg,Unique Light ID:123 means 1st floor->2nd subsection->3rd Tube light" required>
+
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Tubelight Type:
+                              <span class="input-group-text">Tubelight Type:</span>
+
                             </td>
                             <td>
-                                <select name="Tubetype">
+                                <select name="L_type" class="form-control" >
                                 <option selected disabled>--select tubelight type--</option>
                                 <option value="Fluorescent Tube Light T12">Fluorescent Tube Light T12</option>
                                 <option value="Fluorescent Tube LightT8">Fluorescent Tube LightT8</option>
@@ -97,59 +97,111 @@
                         </tr>
                         <tr>
                             <td>
-                                Brand name:
+                              <span class="input-group-text">Brand name*:</span>
+
                             </td>
                             <td>
-                                <input type="text" placeholder="brand name" name="brand" value=""  required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Watts1:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Watts in kW" name="watts" value="" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Lumens:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Lumens" name="lumens" value="" required>
+                                <select name="L_brand" class="form-control" required>
+                                <option selected disabled>--select tubelight type--</option>
+                                <option value="Fluorescent Tube Light T12">Philips</option>
+                                <option value="Fluorescent Tube LightT8">Crompton</option>
+                                <option value="LED Tube Light T4">Eveready</option>
+                                <option value="LED Tube Light T5">Syska</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Expiry Date:
+                                <span class="input-group-text">Watts*:</span>
                             </td>
                             <td>
-                                <input type="Date" placeholder="DD-MM-YYYY" name="Expirydate" value="" required>
+                                <select name="L_watts" class="form-control" required>
+                                <option selected disabled>--select watts(W)--</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="40">40</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Average rated Life:
+                                <span class="input-group-text">Lumens:</span>
                             </td>
                             <td>
-                                <input type="text" placeholder="hrs" name="lifespan"  value="" required>
+                                <input class="form-control" type="text" placeholder="Lumens" name="L_lumens" value="">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Warranty:
+                                <span class="input-group-text">Expiry Date*:</span>
                             </td>
                             <td>
-                                <input type="text" placeholder="No. of years" name="warranty" value="" required>
+                                <input class="form-control" type="Date" placeholder="DD-MM-YYYY" name="L_Expirydate" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="input-group-text">Average rated Life:</span>
+                            </td>
+                            <td>
+                                <select name="L_lifespan" class="form-control">
+                                <option selected disabled>--Select Average Rated Life(hrs)--</option>
+                                <option value="10000">10000</option>
+                                <option value="15000">15000</option>
+                                <option value="20000">20000</option>
+                                <option value="25000">25000</option>
+                                <option value="30000">30000</option>
+                                <option value="35000">35000</option>
+                                <option value="40000">40000</option>
+                                <option value="45000">45000</option>
+                                <option value="50000">50000</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="input-group-text">Warranty*:</span>
+                            </td>
+                            <td>
+                                <select name="L_warranty" class="form-control" required>
+                                <option selected disabled>--select warranty(years)--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                </select>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
-			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Submit">
+			    <input class="btn btn-outline-success" type="submit" name="Submit" value="Submit">
                 <i class="fa fa-undo"></i>
-                <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
-                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='PowerController.html';">Go Back</button>
+                <input class="btn btn-outline-success" type="Reset" name="Reset" value="Reset">
+                &emsp;&emsp;&emsp;<button class="btn btn-outline-success" onclick="window.location.href='PowerController.html';">Go Back</button>
             </div>
         </form>
     </body>

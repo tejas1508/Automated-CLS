@@ -1,6 +1,7 @@
 <html>
     <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="utf-8">
         <title>
             User Dashboard
@@ -10,7 +11,7 @@
 				margin:0;
 				padding:0;
 				font-family:sans-serif;
-				background: url(bg2.jpg) ;
+				background-color:#17202A;
 				background-size:cover;
 			}
 
@@ -24,9 +25,8 @@
             }
             .btn{
 				width:80%;
-				background:none;
-				border:2px solid #99cc00;
-				color:#00ffff;
+				
+
 				padding:5px;
 				font-size:18px;
 				cursor:pointer;
@@ -40,12 +40,12 @@
         </style>
     </head>
     <body>
-        <h1><center style="color:#00ffff">Welcome to User Dashboard</center></h1>
+        <h1><center style="color:#229954">Welcome to User Dashboard</center></h1>
         <div class="dashboard">
 			<form action="logout.php" method="POST">
-				<a href="PowerUsage.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="powerusage-btn" value="View Power Usage"></a>
-				<a href="PowerController.html"><input class="btn btn-primary btn-block btn-lg" type="button" name="powercontrol-btn" value="Control The System"></a>
-				<input class="btn btn-primary btn-block btn-lg" type="submit" name="logout-btn" value="Logout"></a>
+				<button class="btn btn-outline-success" onclick="window.location.href='index.html';" type="button" name="powerusage-btn" value="View Power Usage">View Power Usage</button>
+				<button class="btn btn-outline-success" onclick="window.location.href='PowerController.html';" type="button" name="powercontrol-btn" value="Control The System">Control The System</button>
+				<input class="btn btn-outline-success" type="submit" name="logout-btn" value="Logout"></a>
 			</form>
         </div>
     </body>

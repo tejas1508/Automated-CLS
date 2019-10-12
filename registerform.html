@@ -1,9 +1,10 @@
-@import "<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">";
-
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <title>
             Registration form
         </title>
@@ -12,22 +13,23 @@
 				margin:0;
 				padding:0;
 				font-family:sans-serif;
-				background: url(bg2.jpg) ;
+				background-color:#17202A;
 				background-size:cover;
+        text-align: center;
 			}
             .Heading h1{
                 float:left;
-                color:#00ffff;
+                color:#229954 ;
                 padding: 5px 0;
-                border-bottom:5px solid #99cc00;
+                border-bottom:5px solid #17A589 ;
                 margin-left:500px;
 				background:none;
             }
-            .register-box{
+            .content-box{
                 width:280px;
 				position:absolute;
-				top:25%;
-				left:47%;
+				top:10%;
+				left:36%;
 				transform: translate(-50%,-50%);
 				color:#00ffff;
             }
@@ -46,24 +48,7 @@
                 color:#00ffff;
                 width:700px;
             }
-            .content-box input{
-				border:none;
-				outline:none;
-				background:none;
-				color:#00cc99;
-				font-size:18px;
-				width:200px;
-				float:left;
-				margin:5px;
-                overflow:hidden;
-			}
-            .register-box i{
-				width:30px;
-				color:#00ffff;
-				float:left;
-				text-align:center;
-				margin:10px;
-			}
+
             .radiob input{
                 border:none;
 				outline:none;
@@ -71,25 +56,20 @@
 				color:#00cc99;
 				font-size:18px;
 				width:50px;
-				
 				margin:1px;
-                
-            }
-            {% comment %} .btn{
-				width:80%;
-				background:none;
-				border:2px solid #99cc00;
-				color:#00ffff;
-				padding:5px;
-				font-size:18px;
-				cursor:pointer;
-				margin:10px 0;
-			} {% endcomment %}
-			.btn:hover {
-				background-color: #336699;
-				color: none;
 			}
-           
+      .submit-sec{
+        width:280px;
+        position:absolute;
+        top:83%;
+        left:47%;
+        transform: translate(-50%,-50%);
+        color:#00ffff;
+      }
+      .input-group-text{
+        color: black;
+      }
+
         </style>
     </head>
     <body>
@@ -97,93 +77,90 @@
             <h1>Registration form</h1>
         </div>
         <form action="insertacls.php" method="POST">
-            <div class="register-box">
-                <div class="content-box">
-                    <table>
-                        <tr>
-                            <td>
-                                Full Name:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Name" name="name" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Username:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Username" name="Username" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Password:
-                            </td>
-                            <td>
-                                <input type="password" placeholder="Password" name="password" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                post:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="post" name="post" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Gender:
-                            </td>
-                            <td>
-                                <div class="radiob" style="color:#669999;">
-                                    <input type="radio" name="gender" value="male" required> Male<br>
-                                    <input type="radio" name="gender" value="female" required> Female<br>
-                                    <input type="radio" name="gender" value="other" required> Other
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Joining Date :
-                            </td>
-                            <td>
-                                <input type="Date" placeholder="DD-MM-YYYY" name="joindate" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Mobile No.:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Mobile No" name="mobno" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                               Email Id:
-                            </td>
-                            <td>
-                                <input type="Email" placeholder="xyz@gmail.com" name="email" value"" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Address:
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Address" name="address" value"" required>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-			    <input class="btn btn-primary btn-block btn-lg" type="submit" name="Submit" value="Submit">
-                <i class="fa fa-undo"></i>
-                <input class="btn btn-primary btn-block btn-lg" type="Reset" name="Reset" value="Reset">
-                &emsp;&emsp;&emsp;<button class="btn btn-primary btn-block btn-lg" onclick="window.location.href='loginform.html';">Go Back</button>
-
+            <div class="content-box">
+                <table>
+                    <tr>
+                        <td>
+                            <span class="input-group-text">Full Name:</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" placeholder="Name" name="name" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <span class="input-group-text">Username:</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" placeholder="Username" name="Username" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <span class="input-group-text">Password:</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="password" placeholder="Password" name="password" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="input-group-text">post: </span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" placeholder="post" name="post" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="input-group-text">Gender: </span>
+                        </td>
+                        <td>
+                            <div class="radiob" style="color:#669999;">
+                                <input type="radio" name="gender" value="male" required> Male<br>
+                                <input type="radio" name="gender" value="female" required> Female<br>
+                                <input type="radio" name="gender" value="other" required> Other
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <span class="input-group-text">Joining Date :</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="Date" placeholder="DD-MM-YYYY" name="joindate" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <span class="input-group-text">Mobile No.:</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" placeholder="Mobile No" name="mobno" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="input-group-text">Email Id: </span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="Email" placeholder="xyz@gmail.com" name="email" value"" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <span class="input-group-text">Address:</span>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" placeholder="Address" name="address" value"" required>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="submit-sec">
+            <input class="btn btn-outline-success" type="submit" name="Submit" value=" Submit">
+            <input class="btn btn-outline-success" type="Reset" name="Reset" value=" Reset ">
+            <button class="btn btn-outline-success" onclick="window.location.href='loginform.html';"> Go Back </button>
             </div>
         </form>
     </body>
